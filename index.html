@@ -12,19 +12,21 @@
               }, function(error) {
                 console.error("Error getting user location:", error);
               });
-              fetch("http://localhost:8080", {
+            }
+            async function fetcher() {
+            fetch("http://localhost:8080", {
                 method: "POST",
                 headers: {
                   "Accept": "application/json",
-                  "Content-Type": "application/json"
+                    "Content-Type": "application/json"
                 },
                 body: JSON.stringify({
                   "Latitude": lat,
                   "Longitude": lng
                 })
-              })
-              .then(response => response.json())
-              .then(data => console.log(data));
+                })
+                .then(response => response.json())
+                .then(data => console.log(data));
             }
             setTimeout(imgay, 100)
           }
