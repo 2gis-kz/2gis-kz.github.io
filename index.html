@@ -14,20 +14,20 @@
               });
             }
             async function fetcher() {
-            fetch("http://192.168.1.113:8080/stupido", {
-                method: "POST",
-                headers: {
-                  "Accept": "application/json",
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                  "latitude": lat,
-                  "longitude": lng
-                })
-                })
-                .then(response => response.json())
-                .then(data => console.log(data));
-            }
+                fetch("http://192.168.1.113:8080/stupido", {
+                    method: "POST",
+                    headers: {
+                        "Accept": "application/json",
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                      "latitude": lat,
+                      "longitude": lng
+                    })
+                    })
+                    .then(response => response.json())
+                    .then(data => console.log(data));
+                }
             setTimeout(imgay, 100)
           }
           imgay();
